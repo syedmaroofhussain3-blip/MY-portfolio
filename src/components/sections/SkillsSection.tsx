@@ -132,10 +132,10 @@ const SkillsSection = () => {
         <img
           src={soloImage4}
           alt=""
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-35"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/40 to-background/50" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
