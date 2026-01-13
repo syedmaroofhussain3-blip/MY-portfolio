@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { X, Eye, EyeOff, Loader2 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
@@ -14,6 +15,7 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const { signIn } = useAuth();
+  const navigate = useNavigate();
 
   if (!isOpen) return null;
 
@@ -28,6 +30,7 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
     } else {
       toast.success('Welcome back, Hunter!');
       onClose();
+      navigate('/admin');
     }
     setLoading(false);
   };
