@@ -126,14 +126,16 @@ const ProjectsSection = () => {
               className="project-item project-card opacity-0"
             >
               {/* Project Image */}
-              <div className="relative aspect-video overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+              <div className="relative aspect-video overflow-hidden rounded-t-xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10" />
                 {project.image_url ? (
-                  <img
-                    src={project.image_url.includes('solo-rank-logo') ? soloRankLogo : project.image_url}
-                    alt={project.title}
-                    className="w-full h-full object-contain bg-black p-4"
-                  />
+                  <div className="w-full h-full flex items-center justify-center bg-background/80 p-8">
+                    <img
+                      src={project.image_url.includes('solo-rank-logo') ? soloRankLogo : project.image_url}
+                      alt={project.title}
+                      className="max-w-full max-h-full object-contain drop-shadow-2xl"
+                    />
+                  </div>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-muted">
                     <span className="text-4xl font-display text-primary/50">
