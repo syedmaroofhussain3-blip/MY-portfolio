@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Github, Star } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useQuery } from '@tanstack/react-query';
-import soloImage3 from '@/assets/solo-leveling-3.png';
+
 import soloRankLogo from '@/assets/solo-rank-logo.png';
 import iulEventHub from '@/assets/iul-event-hub.png';
 
@@ -99,17 +99,6 @@ const ProjectsSection = () => {
       ref={sectionRef}
       className="section-container relative"
     >
-      {/* Parallax Background */}
-      <div ref={bgRef} className="absolute inset-0 -inset-y-32 z-0">
-        <img
-          src={soloImage3}
-          alt=""
-          className="w-full h-full object-cover opacity-45"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/35 to-background/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
-      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div ref={titleRef} className="text-center mb-16 opacity-0">

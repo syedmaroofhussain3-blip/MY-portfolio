@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ChevronDown, Github, Instagram, Mail, Phone } from 'lucide-react';
 import { getRandomQuote } from '@/lib/quotes';
-import heroImage from '@/assets/solo-leveling-hero.png';
+
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);

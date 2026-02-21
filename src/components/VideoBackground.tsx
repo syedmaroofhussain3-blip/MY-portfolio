@@ -6,8 +6,8 @@ const VideoBackground = () => {
         loop
         muted
         playsInline
-        className="min-w-full min-h-full object-cover scale-[1.3]"
-        style={{ filter: 'brightness(0.55)', objectPosition: 'center center' }}
+        className="min-w-full min-h-full object-cover scale-[1.4]"
+        style={{ filter: 'brightness(0.65)', objectPosition: 'center center' }}
       >
         <source src="/videos/hero-bg.mp4" type="video/mp4" />
       </video>
