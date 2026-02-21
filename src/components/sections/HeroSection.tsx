@@ -54,15 +54,9 @@ const HeroSection = () => {
       ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Gradient overlay for readability */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Solo Leveling Background"
-          className="w-full h-full object-cover opacity-50"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
       </div>
 
       {/* Content */}

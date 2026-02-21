@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import ParticleBackground from '@/components/ParticleBackground';
+import VideoBackground from '@/components/VideoBackground';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="relative min-h-screen">
-      <ParticleBackground />
+      <VideoBackground />
       <Navbar />
       <main>
         <HeroSection />
