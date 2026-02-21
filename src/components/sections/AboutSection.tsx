@@ -85,17 +85,7 @@ const AboutSection = () => {
       ref={sectionRef}
       className="section-container relative overflow-hidden"
     >
-      {/* Parallax Background */}
-      <div ref={bgRef} className="absolute inset-0 -inset-y-20 z-0">
-        <img
-          src={soloImage}
-          alt=""
-          className="w-full h-full object-cover opacity-40"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/40 to-background/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
-      </div>
+      {/* Removed parallax background image */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div ref={contentRef} className="max-w-4xl mx-auto text-center">
