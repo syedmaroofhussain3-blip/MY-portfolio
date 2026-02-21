@@ -337,7 +337,39 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      profiles_public: {
+        Row: {
+          bio: string | null
+          full_name: string | null
+          github: string | null
+          id: string | null
+          instagram: string | null
+          linkedin: string | null
+          location: string | null
+          title: string | null
+        }
+        Insert: {
+          bio?: string | null
+          full_name?: string | null
+          github?: string | null
+          id?: string | null
+          instagram?: string | null
+          linkedin?: string | null
+          location?: string | null
+          title?: string | null
+        }
+        Update: {
+          bio?: string | null
+          full_name?: string | null
+          github?: string | null
+          id?: string | null
+          instagram?: string | null
+          linkedin?: string | null
+          location?: string | null
+          title?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       has_role: {
