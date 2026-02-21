@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Mail, Phone, Instagram, Github, MapPin, Send, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
-import soloImage4 from '@/assets/solo-leveling-4.png';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,16 +99,6 @@ const ContactSection = () => {
       ref={sectionRef}
       className="section-container relative overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0 opacity-10">
-        <img
-          src={soloImage4}
-          alt=""
-          className="w-full h-full object-cover"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background" />
-      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div ref={titleRef} className="text-center mb-16 opacity-0">

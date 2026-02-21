@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MapPin, Calendar, GraduationCap, Code } from 'lucide-react';
-import soloImage from '@/assets/solo-leveling-2.png';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
