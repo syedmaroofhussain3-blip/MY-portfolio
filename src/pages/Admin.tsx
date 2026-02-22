@@ -3,6 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { User, Briefcase, GraduationCap, Award, FileText, LogOut, Home, Shield, Sword, Crown, Sparkles, Zap } from 'lucide-react';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 import ProfileEditor from '@/components/admin/ProfileEditor';
 import ProjectsEditor from '@/components/admin/ProjectsEditor';
 import SkillsEditor from '@/components/admin/SkillsEditor';
@@ -233,8 +241,34 @@ const Admin = () => {
         </div>
       </div>
 
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-6 pt-6 relative z-10">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors">
+                <Home size={14} strokeWidth={2} aria-hidden="true" />
+                Home
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/admin" className="text-muted-foreground hover:text-primary transition-colors">
+                Admin
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage className="text-primary font-medium capitalize">
+                {tabItems.find(t => t.value === activeTab)?.label ?? activeTab}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
+
       {/* Content */}
-      <main className="container mx-auto px-6 py-10 relative z-10">
+      <main className="container mx-auto px-6 py-6 relative z-10">
         <Tabs defaultValue="profile" className="space-y-10" onValueChange={setActiveTab}>
           <div ref={tabsRef} className="flex justify-center">
             <TabsList className="inline-flex gap-2 p-2 rounded-2xl bg-muted/20 backdrop-blur-md border border-border/30 shadow-2xl">
