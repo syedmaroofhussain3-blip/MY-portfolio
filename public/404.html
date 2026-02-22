@@ -6,14 +6,19 @@
   <title>Redirecting...</title>
   <script>
     // Single Page App redirect for GitHub Pages
-    // This script redirects all 404s to index.html with the path as a query param
-    const basePath = '/solo-rank-portfolio/';
-    const path = window.location.pathname;
-    const search = window.location.search;
-    const hash = window.location.hash;
-    window.location.replace(
-      window.location.origin + basePath + '?p=' + encodeURIComponent(path + search + hash)
-    );
+    var basePath = '/solo-rank-portfolio/';
+    var currentPath = window.location.pathname;
+    var relativePath = currentPath.startsWith(basePath)
+      ? currentPath.substring(basePath.length)
+      : currentPath;
+
+    if (!relativePath || relativePath === '/') {
+      window.location.replace(window.location.origin + basePath);
+    } else {
+      window.location.replace(
+        window.location.origin + basePath + '?p=' + encodeURIComponent(relativePath + window.location.search + window.location.hash)
+      );
+    }
   </script>
 </head>
 <body>
