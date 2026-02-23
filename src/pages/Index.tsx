@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import VideoBackground from '@/components/VideoBackground';
+import SEOHead from '@/components/SEOHead';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -12,6 +13,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="relative min-h-screen">
+      <SEOHead />
       <VideoBackground />
       <Navbar />
       <main>
